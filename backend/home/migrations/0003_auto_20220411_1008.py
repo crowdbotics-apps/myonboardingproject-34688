@@ -6,18 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0002_cycledata'),
+        ("home", "0002_cycledata"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='cycledata',
-            name='lastStartDay',
+            model_name="cycledata",
+            name="lastStartDay",
             field=models.DateTimeField(auto_now=True, null=True),
         ),
         migrations.AddField(
-            model_name='cycledata',
-            name='periodLength',
+            model_name="cycledata",
+            name="periodLength",
             field=models.BigIntegerField(blank=True, null=True),
         ),
     ]
