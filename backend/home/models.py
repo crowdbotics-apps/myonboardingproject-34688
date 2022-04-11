@@ -14,10 +14,3 @@ class CycleData(models.Model):
         null=True,
         blank=True,
     )
-    cycleData = models.OneToOneField(
-        "home.CycleData",
-        on_delete=models.CASCADE,
-        null=True,
-        blank=True,
-        related_name="cycledata_cycleData",
-    )
