@@ -31,6 +31,13 @@ class User(AbstractUser):
         null=True,
         blank=True,
     )
+    cycleData = models.OneToOneField(
+        "home.CycleData",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="user_cycleData",
+    )
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})
